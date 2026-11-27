@@ -1,0 +1,90 @@
+/* Colores de la identidad Otra Forma */
+:root {
+  --tinta: #1f1f1f;
+  --papel: #f5f2eb;
+  --cielo: #82cde2;
+  --azul: #294d9d;
+  --rojo: #ea5035;
+}
+* { box-sizing: border-box; }
+body { margin: 0; color: var(--tinta); background: var(--papel); font-family: "DM Sans", Arial, sans-serif; }
+header, main, footer { width: min(1220px, 90%); margin: auto; }
+a { color: inherit; text-underline-offset: 4px; }
+a:focus-visible, summary:focus-visible { outline: 3px solid var(--azul); outline-offset: 4px; }
+.barra, nav, footer, .firma { display: flex; justify-content: space-between; align-items: center; }
+.barra { padding: 24px 0; border-bottom: 1px solid var(--tinta); }
+nav { gap: 26px; }
+nav a { font-size: .92rem; font-weight: 600; text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+.marca { display: flex; gap: 5px; align-items: flex-start; text-decoration: none; font: 900 24px/.81 Arial,sans-serif; letter-spacing: -1.4px; }
+.marca small { display: block; font: 7px/1.8 Arial,sans-serif; letter-spacing: 2px; }
+b { color: var(--rojo); }
+.simbolo { width: 28px; }
+.simbolo::before, .simbolo::after { content: ""; display: block; }
+.simbolo::before { background: var(--cielo); height: 10px; border-radius: 3px; margin-bottom: 4px; }
+.simbolo::after { height: 12px; border: solid var(--azul); border-width: 10px 0 0 10px; border-top-left-radius: 20px; }
+.portada { display: grid; grid-template-columns: 1.12fr 1fr; gap: 6%; align-items: center; padding: 48px 0 56px; }
+.etiqueta, .categoria, .firma { font: 700 .7rem/1.4 "IBM Plex Mono", monospace; letter-spacing: .13em; text-transform: uppercase; }
+.etiqueta i { display: inline-block; width: 9px; height: 9px; background: var(--rojo); border-radius: 50%; margin-right: 7px; }
+h1, h2, h3 { margin: 0; }
+h1 { font-size: clamp(3.5rem, 6.4vw, 6.6rem); letter-spacing: -.08em; line-height: .96; margin: 24px 0; }
+h1 em { font-family: Georgia, serif; font-weight: 400; color: var(--azul); }
+.presentacion > p:not(.etiqueta), .perfil p, details p { line-height: 1.55; }
+.presentacion > p:not(.etiqueta) { max-width: 380px; }
+.boton { display: inline-flex; gap: 22px; margin-top: 9px; padding: 14px 20px; background: var(--tinta); color: white; text-decoration: none; font-weight: bold; }
+.boton:hover { background: var(--azul); }
+/* Composición geométrica basada en las curvas del símbolo */
+.lamina { background: var(--azul); color: var(--papel); padding: 8% 10% 4%; }
+.cuadricula { display: grid; grid-template-columns: 1fr 1fr; max-width: 320px; margin: auto; }
+.cuadricula i { aspect-ratio: 1; }
+.cuadricula i:nth-child(1) { background: var(--cielo); border-radius: 100% 0 0; }
+.cuadricula i:nth-child(2) { background: var(--rojo); border-radius: 50%; }
+.cuadricula i:nth-child(3) { background: repeating-linear-gradient(135deg, var(--papel) 0 6px, transparent 6px 14px); border-radius: 0 0 0 100%; }
+.cuadricula i:nth-child(4) { background: var(--cielo); border-radius: 0 0 100%; }
+.firma { border-top: 1px solid #ffffff66; margin-top: 7%; padding-top: 10px; }
+.firma span:last-child { font-size: 1.3rem; }
+.proyectos, .perfil, footer { border-top: 1px solid var(--tinta); padding: 32px 0; }
+h2 { font-size: clamp(2rem, 4vw, 3.6rem); letter-spacing: -.065em; }
+.galeria { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin: 26px 0; }
+.miniatura { display: block; width: 100%; aspect-ratio: 1.52; object-fit: cover; }
+.logo { object-fit: contain; background: #120f10; }
+.categoria { color: var(--azul); margin: 17px 0 7px; }
+h3 { font-size: 1.4rem; letter-spacing: -.045em; }
+details { margin-top: 15px; }
+summary { cursor: pointer; font-size: .9rem; font-weight: bold; }
+video { width: 100%; }
+.perfil { display: grid; grid-template-columns: 1fr 1.4fr; gap: 24px; }
+.perfil p { margin: 0; max-width: 580px; }
+footer { font-size: .85rem; gap: 15px; }
+@media (max-width: 720px) {
+  .portada, .perfil, .galeria { grid-template-columns: 1fr; }
+  .portada { gap: 30px; padding: 32px 0; }
+  .cuadricula { max-width: 190px; }
+  .galeria { gap: 36px; }
+  nav { gap: 16px; }
+}
+
+/* El símbolo y el nombre forman una sola firma en la portada. */
+.panel-marca { display:grid; place-items:center; min-height:340px; background:#fffdf8; border:1px solid #d6d2c9; }
+.marca-grande { display:flex; align-items:flex-start; gap:.08em; font-size:clamp(42px,5.4vw,76px); }
+.marca-grande strong { font:900 1em/.82 Arial,sans-serif; letter-spacing:-.07em; }
+.marca-grande small { display:block; font:500 .16em/2 Arial,sans-serif; letter-spacing:.32em; }
+.marca-grande i { width:1.1em; }
+.marca-grande i::before,.marca-grande i::after { content:""; display:block; }
+.marca-grande i::before { height:.39em; background:var(--cielo); border-radius:.09em; margin-bottom:.1em; }
+.marca-grande i::after { height:.48em; border:solid var(--azul); border-width:.38em 0 0 .38em; border-radius:.62em 0 0 0; }
+.enlace-corto { margin-left:12px; font-weight:bold; }
+.biografia,.taller { display:grid; align-items:center; grid-template-columns: .8fr 1.2fr; gap:7%; border-top:1px solid; padding:48px 0; }
+.biografia img { width:100%; max-height:550px; aspect-ratio:4/5; object-fit:cover; object-position:center 58%; }
+.biografia p,.taller p,article p { line-height:1.55; }
+.biografia h3 { margin-top:22px; }
+audio { display:block; max-width:100%; margin:14px 0; }
+.taller figure { margin:0; }
+.taller img,.taller input { display:block; width:100%; }
+.taller label { display:block; margin:12px 0; font-weight:bold; }
+.taller input { accent-color:var(--azul); }
+@media(max-width:720px) {
+  .panel-marca { min-height:200px; }
+  .biografia,.taller { grid-template-columns:1fr; gap:22px; }
+  .biografia img { max-height:420px; }
+}

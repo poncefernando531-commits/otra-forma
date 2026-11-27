@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portafolio de Fernando Sánchez. Identidad visual, fotografía y animación desde San Gabriel, Ecuador.">
+  <title>Otra Forma · Fernando Sánchez</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body id="inicio">
+  <header class="barra">
+    <a class="marca" href="#inicio" aria-label="Otra Forma, inicio">
+      <i class="simbolo" aria-hidden="true"></i>
+      <span>OTRA<br>FORMA<b>.</b><small>CREATIVE STUDIO</small></span>
+    </a>
+    <nav aria-label="Principal"><a href="#proyectos">Proyectos</a><a href="#sobre-mi">Sobre mí</a></nav>
+  </header>
+  <main>
+    <section class="portada" aria-labelledby="titulo">
+      <div class="presentacion">
+        <p class="etiqueta"><i></i> Fernando Sánchez</p>
+        <h1 id="titulo">Ideas que<br>toman <em>forma</em><b>.</b></h1>
+        <p>Desde Carchi, Ecuador, diseño marcas, cuento historias con la cámara y doy vida a personajes de plastilina.</p>
+        <a class="boton" href="#proyectos">Explorar proyectos <span aria-hidden="true">↘</span></a> <a class="enlace-corto" href="#corto">Ver mi corto</a>
+      </div>
+      <div class="panel-marca" aria-label="Otra Forma Creative Studio">
+        <div class="marca-grande"><i aria-hidden="true"></i><strong>OTRA<br>FORMA<b>.</b><small>CREATIVE STUDIO</small></strong></div>
+      </div>
+    </section>
+    <section id="sobre-mi" class="biografia">
+      <img src="fernando.jpg" alt="Fernando Sánchez con gafas y camiseta deportiva negra">
+      <div><p class="categoria">Sobre mí</p><h2>Soy Fernando Sánchez<b>.</b></h2>
+      <p>Tengo 23 años y estudio Multimedia y Producción Audiovisual en Carchi, Ecuador. Diseño es mi materia favorita. Me gusta tomar una idea que empieza en una conversación y probar con letras, colores y formas hasta que se entiende por sí sola.</p>
+      <h3>Del gimnasio al estudio</h3><p>Soy extrovertido y me considero un atleta nato. Disfruto entrenar en el gimnasio, salir a correr, nadar y jugar fútbol. Mi interés por el deporte me llevó a realizar un curso básico de entrenamiento físico.</p>
+      <h3>Piros, entre tres</h3><p>Con dos amigos tengo una página de diseño llamada <strong>Piros</strong>. Es la parte más compartida de lo que hago: un espacio para reunir nuestras ideas y trabajar en equipo mientras sigo formándome para obtener mi licenciatura.</p></div>
+    </section>
+    <section id="proyectos" class="proyectos">
+      <h2>Proyectos seleccionados<b>.</b></h2>
+      <div class="galeria">
+        <article>
+          <img class="miniatura logo" src="los-gatos.png" alt="Identidad del minimarket Los Gatos con un carrito y un gato">
+          <p class="categoria">Identidad visual</p><h3>Minimarket Los Gatos</h3>
+          <p>Del apodo de mi familia a la identidad de nuestro minimarket.</p><details><summary>Historia, aplicaciones y cuña</summary><p>El apodo de mi familia dio origen al nombre del negocio. Reuní un gato y un carrito de compras en un solo símbolo para que esa historia acompañe a la marca.</p><p>En el manual llevé la marca a una mascota, un patrón de iconos y piezas para redes. También trabajé su identidad sonora con esta cuña comercial.</p><audio controls preload="none" aria-label="Cuña de Los Gatos" src="cuna.mp3"></audio><a href="los-gatos.png">Abrir logotipo ↗</a></details>
+        </article>
+        <article>
+          <img class="miniatura" src="fotografia.webp" alt="Una figura sentada frente a una cascada, con un papel entre las manos">
+          <p class="categoria">Fotografía</p><h3>Frente a la cascada</h3>
+          <p>Un retrato de espaldas y un momento de pausa junto al agua.</p><details><summary>Ver fotografía</summary><p>La figura de espaldas dirige la mirada hacia el agua. El encuadre deja espacio al paisaje para transmitir la calma de ese momento.</p><a href="fotografia.webp">Abrir fotografía ↗</a></details>
+        </article>
+        <article>
+          <img class="miniatura" src="guardian.jpg" alt="Fotograma del bosque de plastilina de El guardián encadenado">
+          <p class="categoria">Stop motion</p><h3>El guardián encadenado</h3>
+          <p>La historia del lobo, la chica y el venado, contada en plastilina.</p><details id="corto"><summary>Ver cortometraje</summary><p>Construí el escenario y modelé al lobo, la chica y el venado en plastilina. Después moví las figuras foto a foto para contar la historia.</p>
+            <video controls playsinline preload="none" poster="guardian.jpg" aria-label="El guardián encadenado"><source src="guardian.mp4" type="video/mp4"></video>
+          </details>
+        </article>
+      </div>
+    </section>
+    <section class="taller"><div><p class="categoria">Taller de animación</p><h2>Foto a foto<b>.</b></h2><p>En mis ejercicios de animación practiqué el rebote de un saco de harina para entender cómo se estira y se comprime una forma. Con el flipbook exploré cuánto cambia un movimiento al variar la distancia entre dos dibujos.</p><p>Para el corto pasé del papel al escenario. Desliza el control para recorrer ocho instantes reales de la secuencia.</p></div>
+      <figure><img id="fotograma" src="paso-01.jpg" alt="Secuencia del corto de plastilina"><label for="secuencia">Explorar la secuencia · <output id="contador">1 / 8</output></label><input type="range" id="secuencia" min="1" max="8" value="1"></figure>
+    </section>
+  </main>
+  <script src="secuencia.js"></script>
+  <footer><span>Otra Forma · Fernando Sánchez</span><a href="#inicio">Volver arriba ↑</a></footer>
+</body>
+</html>
